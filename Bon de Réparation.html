@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PDF Form</title>
+    <script src="https://unpkg.com/pdf-lib"></script>
+    <script src="control.js"></script>
+  </head>
+  <body>
+    <form method="POST" action="">
+      <b
+        ><i><font size="4">Bon de Réparation</font></i></b
+      >
+
+      <fieldset style="padding: 2">
+        <p>
+          <font color="#000066">No Bon:</font>
+          <input type="text" name="T1" size="7" value="0" />
+
+          <font color="#000066">Date Bon:</font>
+          <input type="text" name="T2" size="10" value="01/01/2024" />
+
+          <font color="#000066">Heure Bon:</font>
+          <input type="text" name="T3" size="10" value="12:45" />
+        </p>
+
+        <p>
+          <font color="#000066">Code Client:</font>
+          <input type="text" name="T4" size="7" />
+          <input type="text" name="T5" size="50" />
+        </p>
+
+        <p>
+          <font color="#000066">Tél Client:</font>
+          <input type="text" name="T6" size="30" />
+        </p>
+
+        <p>
+          <font color="#000066">Réf Client:</font>
+          <input type="text" name="T7" size="20" />
+          <font color="#000066">No° Serie:</font>
+          <input type="text" name="T8" size="20" />
+        </p>
+        <p>
+            <font color="#000066">Designation Article:</font>
+            <input type="text" name="DA" size="50" />
+
+
+        </p>
+        <p>
+          <font color="#000066">Declaration de la panne:</font>
+          <textarea rows="3" name="S1" cols="40"></textarea>
+        </p>
+
+        <p>
+          <font color="#000066">Accessoire accompagnant l'article:</font>
+          <textarea rows="3" name="S2" cols="40"></textarea>
+        </p>
+      </fieldset>
+
+      <fieldset style="padding: 2">
+        <p>
+          <font color="#FF0000">Statut:</font>
+          <input type="text" name="T9" size="20" />
+
+          <font color="#FF0000">Devis N°:</font>
+          <input type="text" name="T10" size="10" value="0" />
+        </p>
+
+        <p>
+          <font color="#FF0000">Diagnostique:</font>
+          <textarea rows="3" name="S3" cols="40"></textarea>
+        </p>
+
+        <p>
+          <font color="#FF0000">Travail Effectué:</font>
+          <textarea rows="3" name="S4" cols="40"></textarea>
+
+          <font color="#FF0000">Pièces échangées:</font>
+          <textarea rows="3" name="S5" cols="40"></textarea>
+        </p>
+      </fieldset>
+
+      <fieldset style="padding: 2">
+        <input type="checkbox" name="C1" value="ON" />
+        <font color="#006600">Bon de livraison</font>
+
+        <input type="checkbox" name="C2" value="ON" />
+        <font color="#006600">Facture</font>
+
+        <p>
+          <font color="#006600">Frais TTC:</font>
+          <input
+            type="text"
+            name="T11"
+            size="10"
+            value="0.000"
+            style="color: #006600"
+          />
+
+          <font color="#006600">Frais TTC:</font>
+          <input
+            type="text"
+            name="T12"
+            size="10"
+            value="0.000"
+            style="color: #006600"
+          />
+        </p>
+      </fieldset>
+
+      <p>
+        <p>
+          <label for="pdfFile" style="margin-top: 10px; display: block"
+            >Select PDF File:</label
+          >
+          <input
+            type="file"
+            id="pdfFile"
+            accept=".pdf"
+            required
+            style="margin-bottom: 10px"
+          /><br />
+
+          <input
+            type="button"
+            value="Generate PDF"
+            onclick="generatePDF()"
+            style="
+              background-color: #4caf50;
+              color: white;
+              padding: 10px;
+              margin-right: 10px;
+              cursor: pointer;
+              border: none;
+              border-radius: 3px;
+            "
+          />
+
+          <input
+            type="reset"
+            value="Reset"
+            name="B2"
+            style="
+              background-color: #f44336;
+              color: white;
+              padding: 10px;
+              cursor: pointer;
+              border: none;
+              border-radius: 3px;
+            "
+          />
+        </p>
+      </p>
+    </form>
+  </body>
+</html>
